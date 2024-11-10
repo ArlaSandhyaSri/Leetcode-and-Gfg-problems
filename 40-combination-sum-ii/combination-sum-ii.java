@@ -6,17 +6,6 @@ class Solution {
         return finalans;
     }
     static void combination(int index,int candidates[],int target,ArrayList<Integer> ar,List<List<Integer>>finalans){
-        /*if(target==0){
-            finalans.add(new ArrayList<>(ar));
-            return;
-        }
-        for(int i=index;i<candidates.length;i++){
-            if(i>index && candidates[i]==candidates[i-1]) continue;
-            if(candidates[i]>target) break;
-            ar.add(candidates[i]);
-            combination(i+1,candidates,target-candidates[i],ar,finalans);
-            ar.remove(ar.size()-1);
-        }*/
         if(target==0){
             finalans.add(new ArrayList<>(ar));
             return;

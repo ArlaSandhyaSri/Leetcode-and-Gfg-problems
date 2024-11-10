@@ -25,7 +25,38 @@ class Solution {
         int temp=nums[i];
         nums[i]=nums[j];
         nums[j]=temp;*/
-
+      
+      //Brute force
         Arrays.sort(nums);
+
+      // Better --Counting
+      int z=0;
+      int o=0;
+      int t=0;
+      int l=0;
+      while(l<nums.length){
+        if(nums[l]==0){
+            z++;
+            l++;
+        }else if(nums[l]==1){
+            o++;
+            l++;
+        }
+        else{
+            t++;
+            l++;
+        }
+      }
+
+      for(int i=0;i<z;i++){
+        nums[i]=0;
+      }
+      for(int i=z;i<z+o;i++){
+        nums[i]=1;
+      }
+      for(int i=z+o;i<o+z+t;i++){
+        nums[i]=2;
+      }
+
     }
 }

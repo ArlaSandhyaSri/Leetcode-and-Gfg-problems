@@ -27,7 +27,7 @@ class Solution {
         nums[j]=temp;*/
       
       //Brute force
-        Arrays.sort(nums);
+        //Arrays.sort(nums);
 
       // Better --Counting
       int z=0;

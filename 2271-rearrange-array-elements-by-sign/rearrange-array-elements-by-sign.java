@@ -3,30 +3,7 @@ class Solution {
         int n=nums.length;
 
         //Brute
-        List<Integer> neg=new ArrayList<>();
-        List<Integer> pos=new ArrayList<>();
-        for(int i=0;i<n;i++){
-            if(nums[i]<0){
-                neg.add(nums[i]);
-            }
-            else{
-                pos.add(nums[i]);
-            }
-        }
-        int p=0;
-        int ne=0;
-        for(int i=0;i<n;i++){
-            if(i%2==0){
-                nums[i]=pos.get(p);
-                p++;
-            }
-            else{
-                nums[i]=neg.get(ne);
-                ne++;
-            }
 
-        }
-        return nums;
         /*ArrayList<Integer> pos = new ArrayList<>();
         ArrayList<Integer> neg = new ArrayList<>();
 
@@ -54,7 +31,10 @@ class Solution {
             arr[k++]=neg.get(j++);
         }
         return arr;*/
-        /*int arr[]=new int[n];
+
+        //Optimal
+
+        int arr[]=new int[n];
         int pos=0;
         int neg=1;
         for(int i=0;i<n;i++){
@@ -66,7 +46,7 @@ class Solution {
                 neg+=2;
             }
         }
-        return arr;*/
+        return arr;
         
     }
 }

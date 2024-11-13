@@ -12,7 +12,5 @@ class Solution {
                 nums1[k--]=nums2[n--];
             }
         }
-
-
     }
 }

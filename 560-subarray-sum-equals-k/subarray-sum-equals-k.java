@@ -12,6 +12,7 @@ class Solution {
             }
         }
         return cnt;
+       // HashMap
        /* HashMap<Integer,Integer> mp=new HashMap<>();
         mp.put(0,1);
         int count=0;

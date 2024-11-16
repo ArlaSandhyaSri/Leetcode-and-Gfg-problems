@@ -15,7 +15,7 @@ class Solution {
     }
     static void SolveNQueens(int col,List<List<String>> ans,List<String>temp,int n,String board[][]){
         if(col==n){
-            List<String>t = new ArrayList<>();
+           List<String>t = new ArrayList<>();
             for(int i=0;i<n;i++){
                 String str="";
                 for(int j=0;j<n;j++){

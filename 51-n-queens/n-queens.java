@@ -1,5 +1,7 @@
 class Solution {
     public List<List<String>> solveNQueens(int n) {
+
+        //Approach-1 time-->O(N!*N)  space-->O(N2)
         String board[][]=new String[n][n];
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
@@ -22,7 +24,7 @@ class Solution {
                 }
                 t.add(str);
             }
-            if(!ans.contains(temp)){
+            if(!ans.contains(t)){
                 ans.add(new ArrayList<>(t));
 
             }

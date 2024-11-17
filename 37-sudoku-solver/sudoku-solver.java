@@ -12,7 +12,9 @@ class Solution {
                             if(solve(board)){
                                 return true;
                             }
-                            board[i][j]='.';
+                            else{
+                                board[i][j]='.';
+                            }
                         }
 
                     }

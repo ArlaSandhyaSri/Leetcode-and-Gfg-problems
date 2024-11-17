@@ -23,8 +23,9 @@ class Solution {
         return true;
     }
     static boolean isOK(char board[][],int row,int col,char c){
+        //This way of using 3 for loops is not much efficient..so we had another way by using only 1 loop
         //Complte row checking
-        for(int i=0;i<9;i++){
+        /*for(int i=0;i<9;i++){
             if(board[row][i]==c){
                 return false;
             }
@@ -42,6 +43,17 @@ class Solution {
                 if(board[i][j]==c){
                     return false;
                 }
+            }
+        }*/
+        for(int i=0;i<9;i++){
+            if(board[row][i]==c){
+                return false;
+            }
+            if(board[i][col]==c){
+                return false;
+            }
+            if(board[3*(row/3)+i/3][3*(col/3)+i%3]==c){
+                return false;
             }
         }
         return true;

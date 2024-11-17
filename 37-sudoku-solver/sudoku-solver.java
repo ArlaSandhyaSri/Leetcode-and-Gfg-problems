@@ -47,7 +47,7 @@ class Solution {
                 }
             }
         }*/
-        for(int i=0;i<9;i++){
+       /* for(int i=0;i<9;i++){
             if(board[row][i]==c){
                 return false;
             }
@@ -56,6 +56,17 @@ class Solution {
             }
             if(board[3*(row/3)+i/3][3*(col/3)+i%3]==c){
                 return false;
+            }
+        }*/
+        //Another possible way.....> easy understabdable one
+        for (int i = 0; i < 9; i++) {
+            if (board[row][i] == c || board[i][col] == c) return false; // Check row and column
+        }
+        int startRow = (row / 3) * 3; // Determine the starting row of the 3x3 box
+        int startCol = (col / 3) * 3; // Determine the starting column of the 3x3 box
+        for (int i = startRow; i < startRow + 3; i++) {
+            for (int j = startCol; j < startCol + 3; j++) {
+                if (board[i][j] == c) return false; // Check the 3x3 box
             }
         }
         return true;

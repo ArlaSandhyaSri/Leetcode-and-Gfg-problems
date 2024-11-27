@@ -1,6 +1,15 @@
 class Solution {
     public String reverseWords(String s) {
-        String temp="";
+        String words[]=s.trim().split("\\s+"); //this trims starting and ending spaces and \\s+ checks for extra spaces in between and ecludes them also
+        StringBuilder ans=new StringBuilder();
+        for(int i=words.length-1;i>=0;i--){
+            ans.append(words[i]);
+            if(i!=0){
+                ans.append(" ");
+            }
+        }
+        return ans.toString();
+        /*String temp="";
         String ans="";
         int left=0;
         int right=s.length()-1;
@@ -31,6 +40,6 @@ class Solution {
                 ans=temp+' '+ans;
             }
         }
-        return ans;
+        return ans;*/
     }
 }

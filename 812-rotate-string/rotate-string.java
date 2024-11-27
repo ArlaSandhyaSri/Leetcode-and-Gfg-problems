@@ -4,6 +4,8 @@ class Solution {
             return false;
         }
         return (s+s).contains(goal);  //We can check by merging string it will form abcdeabcde if goal is visible in s+s we can can goal will obtain after some rotations.
+
+        //We can also do this by rotating and checking every character as arrays problem rotation.
         
     }
 }

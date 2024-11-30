@@ -4,7 +4,7 @@ class Solution {
         int columns = mat[0].length;
         int prim_sum=0;
 
-        for(int i=0;i<rows;i++){
+       /* for(int i=0;i<rows;i++){
             for(int j=0;j<columns;j++){
                 if(i==j){
                     prim_sum+=mat[i][j];
@@ -21,7 +21,16 @@ class Solution {
             r++;
             c--;
         }
-        return prim_sum+sec_sum;
+        return prim_sum+sec_sum;*/
+        //Optimal
+        int sum=0;
+        for (int i = 0; i < rows; i++) {
+            sum += mat[i][i];
+            if (rows - i - 1 != i) {
+                sum += mat[i][rows - i - 1];
+            }
+        }
+        return sum;
         
     }
 }

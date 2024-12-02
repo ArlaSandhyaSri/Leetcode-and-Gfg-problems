@@ -47,7 +47,8 @@ class Solution {
                 }
             }
         }
-        return s.substring(0,lps[s.length()-1]);
+        //longest prefix will be lps[n-1]  //these lps values gives inf abt length of pref and all;
+        return s.substring(0,lps[n-1]);
 
         
     }

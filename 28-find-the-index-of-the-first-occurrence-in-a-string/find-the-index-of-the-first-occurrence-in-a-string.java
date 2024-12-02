@@ -56,6 +56,8 @@ class Solution {
                 k++;
                 if(k==needle.length()){
                     return j-k;
+                    //If there exist another such pattern in text and if to return all the starting indexes then add one more line
+                    //k=lps[k-1];
                 }
             }else{
                 if(k!=0){

@@ -1,6 +1,6 @@
 class Solution {
     public int strStr(String haystack, String needle) {
-        /*if(needle.length()==0){
+        if(needle.length()==0){
             return -1;
         }if(needle.length()>haystack.length()){
             return -1;
@@ -21,10 +21,10 @@ class Solution {
                 return i;
             }
         }
-        return -1;*/
+        return -1;
 
         //Using KMP
-        int n=haystack.length();
+       /* int n=haystack.length();
 
         int m=needle.length();
         int lps[]=new int[m];
@@ -67,7 +67,7 @@ class Solution {
             }
 
         }
-        return -1;
+        return -1;*/
 
         
     }

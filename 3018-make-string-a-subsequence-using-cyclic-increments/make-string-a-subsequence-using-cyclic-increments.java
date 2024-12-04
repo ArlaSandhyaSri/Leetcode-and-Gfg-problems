@@ -4,7 +4,7 @@ class Solution {
         int len2=str2.length();
         int sec=0;
         for(int i=0;sec<len2 && i<len1;i++){
-            if(str1.charAt(i)==str2.charAt(sec) || str1.charAt(i)+1==str2.charAt(sec) || (str1.charAt(i)=='z' && str2.charAt(sec)=='a')){
+            if(str1.charAt(i)==str2.charAt(sec) || str1.charAt(i)+1==str2.charAt(sec) || str1.charAt(i)-25 ==str2.charAt(sec)){
                 sec++;
             }
 

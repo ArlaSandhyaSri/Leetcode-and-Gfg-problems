@@ -2,12 +2,22 @@ class Solution {
     public boolean canMakeSubsequence(String str1, String str2) {
         int len1=str1.length();
         int len2=str2.length();
+        int first=0;
         int sec=0;
-        for(int i=0;sec<len2 && i<len1;i++){
-            if(str1.charAt(i)==str2.charAt(sec) || str1.charAt(i)+1==str2.charAt(sec) || str1.charAt(i)-25 ==str2.charAt(sec)){
+        while(first<len1 && sec<len2){
+            char ch1=str1.charAt(first);
+            char ch2=str2.charAt(sec);
+            if(ch1==ch2){
+                first++;
                 sec++;
+            }else{
+                if(ch1+1==ch2 || ch1-25==ch2){
+                    first++;
+                    sec++;
+                }else{
+                    first++;
+                }
             }
-
         }
         return sec==len2;
         

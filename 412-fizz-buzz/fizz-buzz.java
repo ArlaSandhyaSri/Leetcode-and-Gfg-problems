@@ -12,7 +12,7 @@ class Solution {
             }
             else{
 
-                ar.add(i+"");
+                ar.add(Integer.toString(i));
             }
         }
         return ar;

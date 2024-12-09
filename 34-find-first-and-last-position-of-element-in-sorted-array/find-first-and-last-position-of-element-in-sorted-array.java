@@ -5,28 +5,6 @@ class Solution {
         int first=-1;
         int last=-1;
 
-        /*while(l<=h){
-            mid=(l+h)/2;
-            if(nums[mid]>target){
-                h=mid-1;
-            }else if(nums[mid]<target){
-                l=mid+1;
-            }else{
-                int indexl=mid;
-                int indexh=mid;
-                while(indexl>=0 && nums[indexl]==target){
-                    first=indexl;
-                    indexl--;
-                }
-                while(indexh<=nums.length-1 && nums[indexh]==target){
-                    last=indexh;
-                    indexh++;
-                }
-                break;
-            }
-
-        }
-        return new int[]{first,last};*/
         while(l<=h){
             int mid=(l+h)/2;
             if(nums[mid]<target){

@@ -1,6 +1,6 @@
 class Solution {
     public String removeOuterParentheses(String s) {
-        StringBuilder sb = new StringBuilder();
+       /* StringBuilder sb = new StringBuilder();
         int countofParanthesis=0;
         for(char ch:s.toCharArray()){
             if(ch=='('){
@@ -14,6 +14,25 @@ class Solution {
                 if(countofParanthesis>0){  //Even after decrementing count>0 then it is not closing of outer paranthesis.
                     sb.append(ch);
                 }
+            }
+        }
+        return sb.toString();*/
+        StringBuilder sb = new StringBuilder();
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            char ch = s.charAt(i);
+            if(ch=='('){
+                if(count!=0){
+                    sb.append(ch);
+                }
+                count++;
+            }
+            else{
+                count--;
+                if(count!=0){
+                    sb.append(ch);
+                }
+
             }
         }
         return sb.toString();

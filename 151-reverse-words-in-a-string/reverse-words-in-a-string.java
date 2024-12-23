@@ -7,6 +7,8 @@ class Solution {
             sb.append(" ");
         }
         return sb.toString().trim();
+
+        
        /* String words[]=s.trim().split("\\s+"); //this trims starting and ending spaces and \\s+ checks for extra spaces in between and ecludes them also
         StringBuilder ans=new StringBuilder();
         for(int i=words.length-1;i>=0;i--){
@@ -15,7 +17,9 @@ class Solution {
                 ans.append(" ");
             }
         }
-        return ans.toString();
+        return ans.toString();*/
+
+
         /*String temp="";
         String ans="";
         int left=0;

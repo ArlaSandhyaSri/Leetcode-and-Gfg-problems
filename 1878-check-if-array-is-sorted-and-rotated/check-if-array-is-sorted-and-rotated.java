@@ -14,7 +14,7 @@ class Solution {
                 return false;
             }
         }
-        if(nums[nums.length-1]>nums[0]){
+        if(nums[nums.length-1]>nums[0]){ // if a array is left rotated then definitely we can say that the array is not arranged in ascending before rotating 
             return false;
         }
         return true;

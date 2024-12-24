@@ -18,6 +18,7 @@ class Solution {
             if(mp.containsKey(nums[i])){
                 ans[0]=mp.get(nums[i]);
                 ans[1]=i;
+                break;
             }
             else{
                 mp.put(target-nums[i],i);

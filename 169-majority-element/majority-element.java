@@ -1,29 +1,5 @@
 class Solution {
-    public int majorityElement(int[] nums) {
-        /*int n =nums.length;
-        int count=0;
-        int element=Integer.MIN_VALUE;
-        for(int i=0;i<n;i++){
-            if(count==0){
-                count++;
-                element=nums[i];
-            }
-            else if(element==nums[i]){
-                count++;
-            }else{
-                count--;
-            }
-        }
-        /*int count1=0;
-        for(int i=0;i<n;i++){
-            if(nums[i]==element){
-                count1++;
-            }
-        }*/
-       // if(count1>n/2){
-       // return element;
-        //}*/
-        
+    public int majorityElement(int[] nums) {        
         //BruteForce
         /*int maj=-1;
         for(int i=0;i<nums.length;i++){

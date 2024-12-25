@@ -1,6 +1,6 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
-        int n=nums.length;
+        /*int n=nums.length;
         int count=0;
         int maxi=0;
         if(n==1){
@@ -21,10 +21,11 @@ class Solution {
         }
         return maxi+1;
         
-    }
-    //int n = a.length;
-       /* if (n == 0)
+    }*/
+       int n = nums.length;
+       if (n == 0){
             return 0;
+       }
 
         int longest = 1;
         Set<Integer> set = new HashSet<>();
@@ -48,5 +49,6 @@ class Solution {
                 longest = Math.max(longest, cnt);
             }
         }
-        return longest;*/
+        return longest;
+    }
 }

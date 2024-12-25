@@ -20,25 +20,7 @@ class Solution {
             }
         }
         return maxi+1;
-        /*int n=nums.length;
-        int count=0;
-        int maxi=0;
-        if(n==1){
-            return 1;
-        }
-        if(n==0){
-            return 0;
-        }
-        Arrays.sort(nums);
-        for(int i=1;i<n;i++){
-            if(nums[i]-1==nums[i-1]){
-                count++;
-                maxi=Math.max(count,maxi);
-            }else if(nums[i]!=nums[i-1]){
-                count=0;
-            }
-        }
-        return maxi+1;*/
+        
     }
     //int n = a.length;
        /* if (n == 0)

@@ -14,7 +14,7 @@ class Solution {
         }
         return cnt;*/
         HashMap<Integer,Integer> mp = new HashMap<>();
-        mp.put(0,1);
+        mp.put(0,1); //if sum==k them this will help to increment the count
         int count=0;
         int sum=0;
         for(int i=0;i<nums.length;i++){
@@ -25,18 +25,5 @@ class Solution {
             mp.put(sum,mp.getOrDefault(sum,0)+1);
         }
         return count;
-       // HashMap
-       /* HashMap<Integer,Integer> mp=new HashMap<>();
-        mp.put(0,1);
-        int count=0;
-        for(int i=0;i<n;i++){
-            sum+=nums[i];
-            int rem=sum-k;
-            if(mp.containsKey(rem)){
-                count+=mp.get(rem);
-            }
-            mp.put(sum,mp.getOrDefault(sum,0)+1);
-        }
-        return count;*/
     }
 }

@@ -15,9 +15,27 @@ class Solution {
         }
         return depth;*/
 
+        int n=s.length();
+        int i=0;
+        int count=0;
+        int ans =0;
+        while(i<n){
+            char ch=s.charAt(i);
+            if(ch=='('){
+                count++;
+            }
+            else if(ch==')'){
+                ans=Math.max(ans,count);
+                count--;
+            }
+            i++;
+        }
+        return ans;
+
+
         //Without using stack
 
-        int depth=0;
+       /* int depth=0;
         int i=0;
         int temp=0;
         while(i<s.length()){
@@ -31,6 +49,6 @@ class Solution {
             }
             i++;
         }
-        return depth;
+        return depth;*/
     }
 }

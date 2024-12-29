@@ -32,23 +32,5 @@ class Solution {
         }
         return ans;
 
-
-        //Without using stack
-
-       /* int depth=0;
-        int i=0;
-        int temp=0;
-        while(i<s.length()){
-            char ch=s.charAt(i);
-            if(ch=='('){
-                temp++;
-            }
-            else if(ch==')'){
-                depth=Math.max(depth,temp);
-                temp--;
-            }
-            i++;
-        }
-        return depth;*/
     }
 }

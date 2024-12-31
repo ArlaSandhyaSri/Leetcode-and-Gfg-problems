@@ -24,22 +24,5 @@ public class Solution {
             }
         }
         return false;
-
-
-
-       /* if(head==null){
-            return false;
-        }
-        ListNode slow_ptr=head;
-        ListNode fast_ptr=head;
-        while(slow_ptr.next!=null && fast_ptr!=null && fast_ptr.next!=null){
-            slow_ptr=slow_ptr.next;
-            fast_ptr=fast_ptr.next.next;
-            if(slow_ptr==fast_ptr){
-                return true;
-            }
-        }
-        return false;*/
-        
     }
 }

@@ -16,20 +16,4 @@ class Solution {
         return ans==-1?nums.length:ans;
     }
 }
-       /* int l=0;
-        int h=nums.length-1;
-        int ans=nums.length;
-        while(l<=h){
-            int mid=(l+h)/2;
-            if(nums[mid]<target){
-                l=mid+1;
-            }
-            else{
-                ans=mid;
-                h=mid-1;
-            }
-        }
-        return ans;
-
-    }
-}*/
+       

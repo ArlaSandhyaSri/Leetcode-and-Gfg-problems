@@ -1,6 +1,6 @@
 class Solution {
-    public boolean searchMatrix(int[][] matrix,int target){
-        int m=matrix.length;
+    //public boolean searchMatrix(int[][] matrix,int target){
+       /* int m=matrix.length;
         int n=matrix[0].length;
 
         int l=0;
@@ -18,11 +18,11 @@ class Solution {
         }
         return false;
         
-    }
-    /*public boolean searchMatrix(int[][] matrix, int target) {
+    }*/
+    public boolean searchMatrix(int[][] matrix, int target) {
         int m=matrix.length;
         int n=matrix[0].length;
-        /*for(int i=0;i<m;i++){
+        for(int i=0;i<m;i++){
             int l=0;
             int r=matrix[i].length-1;
             while(l<=r){
@@ -36,5 +36,6 @@ class Solution {
                 }
             }
         }
-        return false;*/
+        return false;
+    }
 }

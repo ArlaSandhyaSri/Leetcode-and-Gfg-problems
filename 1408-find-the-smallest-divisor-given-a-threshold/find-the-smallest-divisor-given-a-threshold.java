@@ -27,28 +27,4 @@ class Solution {
         return fina;
     }
 }
-        /*int max=0;
-        for(int i:nums){
-            max=Math.max(max,i);
-        }
-        int low=1;
-        int high=max;
-        int divisor=0;
-        while(low<=high){
-            int mid=(low+high)/2;
-            int ans=0;
-            for(int i:nums){
-                int value=i%mid==0?i/mid:(i/mid)+1;
-                ans+=value;
-            }
-            if(ans<=threshold){
-                divisor=mid;
-                high=mid-1;
-            }else{
-                low=mid+1;
-            }
-        }
-        return divisor;
         
-    }
-}*/

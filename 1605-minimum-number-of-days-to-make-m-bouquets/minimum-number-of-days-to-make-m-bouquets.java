@@ -47,42 +47,4 @@ class Solution {
 
 
 
-       /* if((long)m*k>bloomDay.length){ 
-            //used long bcoz if length if long it will throw an aerror if not used long;
-            return -1;
-        }
-        int low=1;
-        int high=maxone(bloomDay);
-        while(low<=high){
-            int mid=(low+high)/2;
-            if(countadjflowers(bloomDay,mid,m,k)){
-                high=mid-1;
-            }else{
-                low=mid+1;
-            }
-        }
-        return low;
-    }
-    static int maxone(int bloomDay[]){
-        int max=Integer.MIN_VALUE;
-        for(int i=0;i<bloomDay.length;i++){
-            max=Math.max(max,bloomDay[i]);
-        }
-        return max;
-    }
-    static boolean countadjflowers(int bloomDay[],int mid,int m,int k){
-        int boquets=0;
-        int adjcount=0;
-        for(int i=0;i<bloomDay.length;i++){
-            if(bloomDay[i]<=mid){
-                adjcount++;
-                if(adjcount==k){
-                    boquets++;
-                    adjcount=0;
-                }
-            }
-            else{
-                adjcount=0;
-            }
-        }
-        return boquets>=m;*/
+      

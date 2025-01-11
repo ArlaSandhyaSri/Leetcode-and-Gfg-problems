@@ -1,16 +1,17 @@
 class Solution {
     public boolean canConstruct(String s, int k) {
-        int count=0;
-        HashMap<Character,Integer> mp = new HashMap<>();
-        for(int i=0;i<s.length();i++){
-            mp.put(s.charAt(i),mp.getOrDefault(s.charAt(i),0)+1);
+        if (s.length() < k) return false;
+        if (s.length() == k) return true;
+        int[] freq = new int[26];
+        int oddCount = 0;
+        for (char chr : s.toCharArray()) {
+            freq[chr - 'a']++;
         }
-        for(Map.Entry<Character,Integer> m:mp.entrySet()){
-            if(m.getValue()%2!=0){
-                count++;
+        for (int count : freq) {
+            if (count % 2 == 1) {
+               oddCount++;
             }
         }
-        return count<=k && k<=s.length();
-        
+        return oddCount <= k;
     }
 }

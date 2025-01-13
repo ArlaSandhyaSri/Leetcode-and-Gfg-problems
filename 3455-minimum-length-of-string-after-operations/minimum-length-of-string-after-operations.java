@@ -1,5 +1,21 @@
 class Solution {
     public int minimumLength(String s) {
+        //optimal
+        int n = s.length();
+        int cnt[] = new int[26];
+
+        int removed = 0;
+        for (char ch : s.toCharArray()){
+            cnt[ch - 'a']  += 1;
+            if (cnt[ch - 'a'] > 2){
+                cnt[ch-'a'] -= 2;
+                removed += 2;
+            }
+        }
+        return n - removed;
+    }
+}
+/*
         if(s.length()<=2){
             return s.length();
         }
@@ -21,4 +37,4 @@ class Solution {
         return ans;
         
     }
-}
+}*/

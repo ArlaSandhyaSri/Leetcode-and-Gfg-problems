@@ -1,5 +1,7 @@
 class Solution {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
+//potd
+
         /*int c[]=new int[A.length];
         HashMap<Integer,Integer> mp = new HashMap<>();
         for(int i=0;i<A.length;i++){

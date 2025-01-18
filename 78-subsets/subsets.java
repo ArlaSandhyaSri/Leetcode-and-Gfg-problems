@@ -5,7 +5,7 @@ class Solution {
         return finall;
     }
     public void subsets(int nums[],int index,ArrayList<Integer>temp){
-        if(index>=nums.length){
+        if(index==nums.length){
             finall.add(new ArrayList(temp));
             return;
 

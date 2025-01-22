@@ -16,4 +16,24 @@ class Solution {
         return false;
     }
 }
+
+    /* private int search(int[] arr, int target, int n) {
+        for (int i = 0; i <n; i++) {
+            if (arr[i] == target) return i;
+        }
+        return -1;
+    }
+    public boolean checkIfExist(int[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            int target = arr[i] * 2;
+            int val = search(arr, target, arr.length);
+            if (val != -1 && val != i) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+}*/
        

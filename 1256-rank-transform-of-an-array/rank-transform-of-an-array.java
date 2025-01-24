@@ -1,6 +1,5 @@
 class Solution {
     public int[] arrayRankTransform(int[] arr) {
-       // int ans[] = new int[arr.length];
         int num[]=Arrays.copyOf(arr,arr.length);
         Arrays.sort(num);
         HashMap<Integer,Integer> mp = new HashMap<>();

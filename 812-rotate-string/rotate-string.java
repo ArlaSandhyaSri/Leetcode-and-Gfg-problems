@@ -1,13 +1,13 @@
 class Solution {
     public boolean rotateString(String s, String goal) {
-        if(s.length()!=goal.length()){
+        /*if(s.length()!=goal.length()){
             return false;
         }
-        return (s+s).contains(goal);  //We can check by merging string it will form abcdeabcde if goal is visible in s+s we can can goal will obtain after some rotations.
+        return (s+s).contains(goal); */ //We can check by merging string it will form abcdeabcde if goal is visible in s+s we can can goal will obtain after some rotations.
 
         //We can also do this by rotating and checking every character as arrays problem rotation.
 
-        /*
+        
         int k = s.length();
         while( k>0 ){
             String a = RotateString(s);
@@ -30,7 +30,6 @@ class Solution {
             r.append(a[i]);
         }
         return r.toString();
-    }*/
         
     }
 }

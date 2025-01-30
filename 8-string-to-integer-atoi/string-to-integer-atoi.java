@@ -36,34 +36,7 @@ class Solution {
         // Stop processing at the first non-digit character
         return result * sign;
     
-    /*public int myAtoi(String s) {
-        return atoi(s.trim(),0,1,0);
-    }
-    static int atoi(String s,int index,int sign,int result){
-        if(index>=s.length()){
-            return sign*result;
-        }
-        /*if(s.charAt(index)==' '){
-            return atoi(s,index+1,sign,result);
-        }*/
-       /* if(s.charAt(index)=='+' && index==0){
-            return atoi(s,index+1,1,result);
-        }
-        if(s.charAt(index)=='-'&& index==0){
-            return atoi(s,index+1,-1,result);
-        }
-
-        if(Character.isDigit(s.charAt(index))){
-            if(result*sign>(Integer.MAX_VALUE - s.charAt(index))/10){
-                return Integer.MAX_VALUE*sign;
-            }
-            if(result*sign<(Integer.MIN_VALUE + s.charAt(index))/10){
-                return Integer.MIN_VALUE*sign;
-            }
-            result=result*10+(s.charAt(index)-'0');
-            return atoi(s,index+1,sign,result);
-        }
-        return result*sign;
+    
        /* int n=s.length();
         int index=0;
         while(index<s.length()&&s.charAt(index)==' '){

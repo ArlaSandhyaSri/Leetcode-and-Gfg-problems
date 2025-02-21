@@ -1,6 +1,7 @@
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> finalans=new ArrayList<>();
+       
+       List<List<Integer>> finalans=new ArrayList<>();
         Arrays.sort(candidates);
         combination(0,candidates,target,new ArrayList<>(),finalans);
         return finalans;

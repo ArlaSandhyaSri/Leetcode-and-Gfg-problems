@@ -13,7 +13,7 @@ class Solution {
         }
         return ans;*/
 
-        HashMap<Integer,Integer> mp = new HashMap<>();
+       /* HashMap<Integer,Integer> mp = new HashMap<>();
         for(int i=0;i<nums.length;i++){
             if(mp.containsKey(nums[i])){
                 ans[0]=mp.get(nums[i]);
@@ -22,6 +22,19 @@ class Solution {
             }
             else{
                 mp.put(target-nums[i],i);
+            }
+        }
+        return ans;
+    }*/
+    HashMap<Integer,Integer> mp = new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            if(mp.containsKey(target-nums[i])){
+                ans[0]=mp.get(target-nums[i]);
+                ans[1]=i;
+                break;
+            }
+            else{
+                mp.put(nums[i],i);
             }
         }
         return ans;

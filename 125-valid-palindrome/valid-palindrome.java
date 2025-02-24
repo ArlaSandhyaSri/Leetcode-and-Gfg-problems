@@ -54,9 +54,9 @@ class Solution {
         if(c>='a'&&c<='z'){
             return true;
         }
-        if(c>='A'&&c<='Z'){
+       /* if(c>='A'&&c<='Z'){
             return true;
-        }
+        }*/
         return false;
     }
 }

@@ -1,6 +1,6 @@
 class Solution {
     public boolean isPalindrome(String s) {
-         String b = "";
+        /*String b = "";
         for (int i = 0; i < s.length(); i++) {
             if (Character.isLetterOrDigit(s.charAt(i))) { 
                 b += Character.toLowerCase(s.charAt(i));
@@ -22,8 +22,8 @@ class Solution {
         }
         return true;
     }
-}
-       /* if(s.length()==0){
+}*/
+       if(s.length()==0){
             return true;
         }
         s=s.toLowerCase();
@@ -58,4 +58,5 @@ class Solution {
             return true;
         }
         return false;
-    }*/
+    }
+}

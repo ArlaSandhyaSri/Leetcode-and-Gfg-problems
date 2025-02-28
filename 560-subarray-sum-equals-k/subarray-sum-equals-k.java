@@ -1,6 +1,6 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        /*int n=nums.length;
+        int n=nums.length;
         int sum=0;
         int cnt=0;
         for (int i = 0 ; i < n; i++){
@@ -12,8 +12,8 @@ class Solution {
                 }
             }
         }
-        return cnt;*/
-        HashMap<Integer,Integer> mp = new HashMap<>();
+        return cnt;
+       /* HashMap<Integer,Integer> mp = new HashMap<>();
         mp.put(0,1); //if sum==k them this will help to increment the count
         int count=0;
         int sum=0;
@@ -24,6 +24,6 @@ class Solution {
             }
             mp.put(sum,mp.getOrDefault(sum,0)+1);
         }
-        return count;
+        return count;*/
     }
 }

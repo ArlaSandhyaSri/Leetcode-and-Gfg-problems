@@ -5,16 +5,18 @@ class Solution {
         }
         int low=1;
         int high=max(bloomDay);
+        int ans=-1;
         while(low<=high){
             int mid=(low+high)/2;
             if(check(mid,bloomDay,m,k)){
+                ans=mid;
                 high=mid-1;
             }else{
                 low=mid+1;
             }
 
         }
-        return low;
+        return ans;
     }
     static int max(int bloomDay[]){
         int maxi=Integer.MIN_VALUE;

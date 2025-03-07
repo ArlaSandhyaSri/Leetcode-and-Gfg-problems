@@ -1,25 +1,24 @@
 class Solution {
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> temp=new ArrayList<>();
+        Arrays.sort(nums);
         boolean freq[]=new boolean[nums.length];
-        generate(0,nums,temp,ans,freq);
+        generate(nums,new ArrayList<>(),ans,freq);
         return ans;
     }
-    static void generate(int index,int nums[],List<Integer>temp,List<List<Integer>>ans,boolean[] freq){
-        if(index==nums.length){
-            if(!ans.contains(temp)){
-                ans.add(new ArrayList<>(temp));
-            }
+    static void generate(int nums[],List<Integer>temp,List<List<Integer>>ans,boolean[] freq){
+        if(temp.size()==nums.length){
+            ans.add(new ArrayList<>(temp));
             return;
         }
         for(int i=0;i<nums.length;i++){
-            if(freq[i]){continue;}
+            if(freq[i] || (i>0 && nums[i]==nums[i-1] && !freq[i-1])){continue;}
             freq[i]=true;
             temp.add(nums[i]);
-            generate(index+1,nums,temp,ans,freq);
-            temp.remove(temp.size()-1);
+            generate(nums,temp,ans,freq);
             freq[i]=false;
+            temp.remove(temp.size()-1);
+            
         }
         
     }

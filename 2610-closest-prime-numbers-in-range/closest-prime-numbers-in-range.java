@@ -1,6 +1,6 @@
 class Solution {
     public int[] closestPrimes(int left, int right) {
-        int ans[]={-1,-1};
+        /*int ans[]={-1,-1};
         ArrayList<Integer> ar = new ArrayList<>();
         for(int i=left;i<=right;i++){
             if(check(i)){
@@ -18,8 +18,8 @@ class Solution {
                 break;
             }
         }
-        return ans;
-        /*int ans[]={-1,-1};
+        return ans;*/
+        int ans[]={-1,-1};
         int minGap=Integer.MAX_VALUE;
         int prev=-1;
         for(int i=left;i<=right;i++){
@@ -37,7 +37,7 @@ class Solution {
 
             }
         }
-        return ans;*/
+        return ans;
         
     }
     static boolean check(int n){

@@ -30,6 +30,8 @@ class Solution {
             }
             return;
         }
+        //Placing queen cloumnwise first in 1st column then in 2nd and next 3rd,4th
+        
         for(int row=0;row<n;row++){
            if(NoHarm(row,col,n,board)){
                 board[row][col]="Q";

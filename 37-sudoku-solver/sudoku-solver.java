@@ -23,23 +23,18 @@ class Solution {
         return true;
     }
     static boolean isOK(char board[][],int row,int col,char c){
-        for(int i=0;i<9;i++){
-            if(board[row][i]==c || board[i][col]==c){
-                return false;
-            }
+        for (int i = 0; i < 9; i++) {
+            if (board[row][i] == c || board[i][col] == c) return false; // Check row and column
         }
         int startRow = (row / 3) * 3; // Determine the starting row of the 3x3 box
         int startCol = (col / 3) * 3; // Determine the starting column of the 3x3 box
-        for(int i=startRow;i<startRow+3;i++){
-            for(int j=startCol;j<startCol+3;j++){
-                if(board[i][j]==c){
-                    return false;
-                }
+        for (int i = startRow; i < startRow + 3; i++) {
+            for (int j = startCol; j < startCol + 3; j++) {
+                if (board[i][j] == c) return false; // Check the 3x3 box
             }
         }
         return true;
     }
-    /*static boolean isOK(char board[][],int row,int col,char c){
         //This way of using 3 for loops is not much efficient..so we had another way by using only 1 loop
         //Complte row checking
         /*for(int i=0;i<9;i++){
@@ -73,19 +68,4 @@ class Solution {
                 return false;
             }
         }*/
-        //Another possible way.....> easy understabdable one
-       /* for (int i = 0; i < 9; i++) {
-            if (board[row][i] == c || board[i][col] == c) return false; // Check row and column
-        }
-        int startRow = (row / 3) * 3; // Determine the starting row of the 3x3 box
-        int startCol = (col / 3) * 3; // Determine the starting column of the 3x3 box
-        for (int i = startRow; i < startRow + 3; i++) {
-            for (int j = startCol; j < startCol + 3; j++) {
-                if (board[i][j] == c) return false; // Check the 3x3 box
-            }
-        }
-        return true;
-
-    }*/
-
 }

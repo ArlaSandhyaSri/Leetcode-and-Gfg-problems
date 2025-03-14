@@ -1,8 +1,13 @@
 class Solution {
     public int maximumCandies(int[] candies, long k) {
         int max=0;
+        long sum=0;
         for(int i=0;i<candies.length;i++){
+            sum+=candies[i];
             max=Math.max(max,candies[i]);
+        }
+        if(k>sum){
+            return 0;
         }
        
         int l=1;

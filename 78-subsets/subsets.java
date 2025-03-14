@@ -8,7 +8,6 @@ class Solution {
         if(index>=nums.length){
             finall.add(new ArrayList(temp));
             return;
-
         }
         temp.add(nums[index]);
         subset(nums,index+1,temp);

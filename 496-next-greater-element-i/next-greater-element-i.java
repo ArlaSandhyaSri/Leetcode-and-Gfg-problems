@@ -17,17 +17,21 @@ class Solution {
             }
         }
         return ans;*/
+        int i=0;
         int ans[]=new int[nums1.length];
         HashMap<Integer,Integer> mp = new HashMap<>();
         Stack<Integer> st = new Stack<>();
-        for(int i=0;i<nums2.length;i++){
-            while(!st.isEmpty() && nums2[i]>st.peek()){
-                mp.put(st.pop(),nums2[i]);
+        for(int num:nums2){
+            while(!st.isEmpty() && num>st.peek()){
+                mp.put(st.pop(),num);
             }
-            st.push(nums2[i]);
+            st.push(num);
         }
-        for(int i=0;i<nums1.length;i++){
-            ans[i]=mp.getOrDefault(nums1[i],-1);
+        while (!st.isEmpty()) {
+            mp.put(st.pop(), -1);
+        }
+        for(int num:nums1){
+            ans[i++]=mp.get(num);
         }
         return ans;
         

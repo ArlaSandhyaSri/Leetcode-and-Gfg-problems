@@ -14,7 +14,7 @@ class Solution {
             }
 
         }*/
-        Map<Integer,Integer> mp = new HashMap<>();
+        /*Map<Integer,Integer> mp = new HashMap<>();
         for(int i=0;i<n;i++){
             mp.put(nums[i],mp.getOrDefault(nums[i],0)+1);
         }
@@ -23,7 +23,29 @@ class Solution {
             if(et.getValue()>n/2){
                 return et.getKey();
             }
+        }*/
+        int count=0;
+        for(int i=0;i<n;i++){
+            if(count==0){
+                major=nums[i];
+                count++;
+            }
+            else if(nums[i]==major){
+                count++;
+            }else{
+                count--;
+            }
         }
+        int c=0;
+        for(int i=0;i<n;i++){
+            if(nums[i]==major){
+                c++;
+            }
+        }
+        if(c>n/2){
+            return major;
+        }
+        
 
         return -1;
     }

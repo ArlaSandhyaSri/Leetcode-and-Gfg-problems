@@ -23,8 +23,6 @@ class Solution {
             }
             bottom--;
 
-            
-
             for(int i=bottom;i>=top;i--){
                 ls.add(matrix[i][left]);
             }

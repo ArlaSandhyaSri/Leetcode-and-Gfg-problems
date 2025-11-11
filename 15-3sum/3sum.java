@@ -23,24 +23,64 @@ class Solution {
 
 
         //better
-        Set<List<Integer>> arr = new HashSet<>();
-        for(int i=0;i<n;i++){
-            Set<Integer> hs = new HashSet<>();
-            for(int j=i+1;j<n;j++){
-                int third = -(nums[i]+nums[j]);
-                if(hs.contains(third)){
-                    List<Integer> ar = Arrays.asList(nums[i],nums[j],third);
+        // Set<List<Integer>> arr = new HashSet<>();
+        // for(int i=0;i<n;i++){
+        //     Set<Integer> hs = new HashSet<>();
+        //     for(int j=i+1;j<n;j++){
+        //         int third = -(nums[i]+nums[j]);
+        //         if(hs.contains(third)){
+        //             List<Integer> ar = Arrays.asList(nums[i],nums[j],third);
 
-                    ar.sort(null);
-                    arr.add(ar);
+        //             ar.sort(null);
+        //             arr.add(ar);
+        //         }
+
+        //         hs.add(nums[j]);
+        //     }
+        // }
+
+        // List<List<Integer>> finall = new ArrayList<>(arr);
+        // return finall; 
+
+
+        //optimal
+        List<List<Integer>> finall = new ArrayList<>();
+        Arrays.sort(nums);
+        for(int i=0;i<n;i++){
+            if(i!=0 && nums[i]==nums[i-1]){
+                continue;
+            }
+            int j=i+1;
+            int k=n-1;
+            while(j<k){
+                int sum=nums[i]+nums[j]+nums[k];
+
+                if(sum<0){
+                    j++;
+                }else if(sum>0){
+                    k--;
+                }else{
+                    List<Integer> arr = new ArrayList<>();
+                    arr.add(nums[i]);
+                    arr.add(nums[j]);
+                    arr.add(nums[k]);
+                    finall.add(arr);
+
+                    j++;
+                    k--;
+                    while(j<k && nums[j]==nums[j-1]){
+                        j++;
+                    }
+                    while(j<k && nums[k]==nums[k+1]){
+                        k--;
+                    }
+
                 }
 
-                hs.add(nums[j]);
             }
         }
+        return finall;
 
-        List<List<Integer>> finall = new ArrayList<>(arr);
-        return finall; 
 
 
 

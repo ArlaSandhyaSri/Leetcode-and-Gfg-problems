@@ -13,12 +13,13 @@ class Solution {
                 st++;
                 continue;
             }
-            // if(nums[mid]==nums[end]){
-            //     end--;
-            //     continue;
-            // }
+            if(nums[end]==nums[mid]) {
+                end--;
+                continue;
+            }
+            
 
-            if(nums[mid]>nums[st]){
+            if(nums[mid]>=nums[st]){
                 if(nums[mid]>target && nums[st]<=target){
                     end=mid-1;
                 }

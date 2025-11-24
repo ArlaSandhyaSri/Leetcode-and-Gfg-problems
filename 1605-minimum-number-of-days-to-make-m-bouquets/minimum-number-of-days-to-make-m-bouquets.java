@@ -3,50 +3,48 @@ class Solution {
         if((long)m*k>bloomDay.length){
             return -1;
         }
-        int low=1;
-        int high=max(bloomDay);
         int ans=-1;
-        while(low<=high){
-            int mid=(low+high)/2;
-            if(check(mid,bloomDay,m,k)){
+        int st=1;
+        int end=maxi(bloomDay);
+        while(st<=end){
+            int mid=(st+end)/2;
+            if(check(bloomDay,m,k,mid)){
                 ans=mid;
-                high=mid-1;
+                end=mid-1;
             }else{
-                low=mid+1;
+                st=mid+1;
             }
+        }
+        return ans;   
+    }
 
+    static boolean check(int bloomDay[],int m,int k,int mid){
+
+        int adjCount=0;
+        int boq=0;
+        for(int i=0;i<bloomDay.length;i++){
+            if(bloomDay[i]<=mid){
+                adjCount++;
+                if(adjCount==k){
+                    boq++;
+                    adjCount=0;
+                }
+                
+            }else{
+                adjCount=0;
+
+            }
+        }
+        return boq>=m;
+
+
+    }
+    static int maxi(int bloomDay[]){
+        int ans=Integer.MIN_VALUE;
+
+        for(int i=0;i<bloomDay.length;i++){
+            ans=Math.max(ans,bloomDay[i]);
         }
         return ans;
     }
-    static int max(int bloomDay[]){
-        int maxi=Integer.MIN_VALUE;
-        for(int i=0;i<bloomDay.length;i++){
-            if(bloomDay[i]>maxi){
-                maxi=bloomDay[i];
-            }
-        }
-        return maxi;
-    }
-    static boolean check(int mid,int bloomDay[],int m,int k){
-        int adjcount=0;
-        int boquets=0;
-        for(int i=0;i<bloomDay.length;i++){
-            if(bloomDay[i]<=mid){
-                adjcount++;
-                if(adjcount==k){
-                    boquets++;
-                    adjcount=0;
-                }
-            }else{
-                adjcount=0;
-            }
-        }
-        return boquets>=m;
-    }
 }
-
-
-
-
-
-      

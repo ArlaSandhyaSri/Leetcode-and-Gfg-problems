@@ -7,7 +7,7 @@ class Solution {
             int mid=(st+end)/2;
             int ans=0;
             for(int i:nums){
-                ans+=i%mid==0?i/mid: (i/mid)+1;
+                ans+=i%mid==0?i/mid:(i/mid)+1;
             }
             if(ans<=threshold){
                 an=mid;

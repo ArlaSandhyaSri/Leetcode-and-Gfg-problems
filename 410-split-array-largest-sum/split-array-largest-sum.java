@@ -4,35 +4,35 @@ class Solution {
         int low=0;
         int high=0;
         for(int i=0;i<nums.length;i++){
-            low=Math.max(nums[i],low);
+            low=Math.max(low,nums[i]);
             high+=nums[i];
         }
+
         while(low<=high){
             int mid=(low+high)/2;
-            int splitcount=calculate(nums,mid);
-            if(splitcount>k){ // if subarrays greater than k then subarray should  be increased
+            if(count(mid,nums,k)>k){
                 low=mid+1;
-            }else{
-                ans=Math.min(ans,mid);     
-// else decrease the length of subarray or if count==k then should seek  for minimum sum on left part.
+            }
+            else{
+                ans=Math.min(ans,mid);
                 high=mid-1;
             }
-
         }
         return ans;
         
     }
-    static int calculate(int nums[],int mid){
-        int noofsub=1;
+    static int count(int mid,int nums[],int k){
+        int count=1;
         int sum=0;
         for(int i=0;i<nums.length;i++){
             if(sum+nums[i]<=mid){
                 sum+=nums[i];
             }else{
-                noofsub++;
+                count++;
                 sum=nums[i];
             }
+
         }
-        return noofsub;
+        return count;
     }
 }

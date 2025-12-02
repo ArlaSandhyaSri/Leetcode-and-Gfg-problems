@@ -14,7 +14,7 @@ class Solution {
             }
         }
 
-        ans[n]=low;
+        ans[n]=low; //at last both values will be equal append that to ans
 
         return ans;
 

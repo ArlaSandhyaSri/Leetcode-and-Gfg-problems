@@ -3,17 +3,20 @@ class NumArray {
 
 
     public NumArray(int[] nums) {
-        prefSum=new int[nums.length+1];
+        prefSum=new int[nums.length];
         int sum=0;
-        prefSum[0]=0;
+        prefSum[0]=nums[0];
         for(int i=1;i<prefSum.length;i++){
-            prefSum[i]=prefSum[i-1]+nums[i-1];
+            prefSum[i]=prefSum[i-1]+nums[i];
         }
         
     }
     
     public int sumRange(int left, int right) {
-        return prefSum[right+1]-prefSum[left];
+        if(left==0){
+            return prefSum[right];
+        }
+        return prefSum[right]-prefSum[left-1];
         
     }
 }

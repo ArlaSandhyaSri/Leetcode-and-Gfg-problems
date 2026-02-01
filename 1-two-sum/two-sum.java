@@ -3,7 +3,23 @@ class Solution {
         int n=nums.length;
         int ans[]=new int[2];
 
-        for(int i=0;i<n-1;i++){
+        Map<Integer,Integer> mp = new HashMap<>();
+
+        for(int i=0;i<n;i++){
+            if(mp.containsKey(nums[i])){
+                ans[0]=mp.get(nums[i]);
+                ans[1]=i;
+                return ans;
+            }
+            else{
+                mp.put(target-nums[i],i);
+            }
+        }
+
+        return ans;
+
+
+       /* for(int i=0;i<n-1;i++){
             for(int j=i+1;j<n;j++){
                 if(nums[i]+nums[j]==target){
                     ans[0]=i;
@@ -12,7 +28,7 @@ class Solution {
             }
         }
 
-        return ans;
+        return ans;*/
         
     }
 }
